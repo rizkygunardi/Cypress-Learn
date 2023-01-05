@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
 describe("Browser Action", () => {
-  beforeEach(() => {
-    cy.visit("https://books.toscrape.com/index.html");
-  });
+  // beforeEach(() => {
+  //   cy.visit("https://books.toscrape.com/index.html");
+  // });
 
   it("Should load books website", () => {
     cy.visit("https://books.toscrape.com/index.html", { timeout: 10000 });
