@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+/* MUNGKIN KODE INI BELUM SEMPURNA DIKARENAKAN WEBSITE UNTUK MELAKUKAN TESTING MENGALAMI SERVER DOWN */
+
 describe("Tugas command", () => {
   it("Mengecek website", () => {
     cy.visit("http://zero.webappsecurity.com/login.html");
