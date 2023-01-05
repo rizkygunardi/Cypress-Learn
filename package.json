@@ -8,7 +8,7 @@
     "cyopen": "cypress open"
   },
   "dependencies": {
-    "cypress": "^12.2.0"
+    "cypress": "12.3.0"
   },
   "repository": "https://github.com/rizkygunardi/Cypress-Learn.git",
   "author": "Rizky Gunardi <rgunardi97@gmail.com>"

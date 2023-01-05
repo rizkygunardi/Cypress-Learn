@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login", (username, password) => {
+  cy.clearAllCookies();
+  cy.clearAllLocalStorage();
+
+  cy.get("#user_login").clear();
+  cy.get("#user_login").type(username);
+
+  cy.get('input[name="user_password"]').clear();
+  cy.get('input[name="user_password"]').type(password);
+});
+
+Cypress.Commands.add("form", () => {
+  cy.get('[type="radio"]').check("Apple");
+  cy.get(".sp_account").type("radio").check("Savings");
+  cy.get('input[name="amount"]').type("5000");
+  cy.get('input[name="date"]').type("2023-08-09");
+  cy.get('input[name="description"]').type("-");
+  cy.get(".pay_saved_payees").click();
+});
