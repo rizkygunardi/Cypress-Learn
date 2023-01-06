@@ -1,8 +1,7 @@
 /// <reference types="cypress" />
 
-/* MUNGKIN KODE INI BELUM SEMPURNA DIKARENAKAN WEBSITE UNTUK MELAKUKAN TESTING MENGALAMI SERVER DOWN */
-
 describe("Tugas command", () => {
+  beforeEach;
   it("Mengecek website", () => {
     cy.visit("http://zero.webappsecurity.com/login.html");
     cy.url().should("include", "login.html");
@@ -22,20 +21,14 @@ describe("Tugas command", () => {
       //Masuk kehalaman pay bills
       cy.get("#pay_bills_tab").click();
 
-      //mengisi halaman payment
-      cy.get(".sp_payee").click();
+      // //mengisi form
+      cy.form();
 
-      //mengisi form
-      cy.get('[type="radio"]').check("Apple");
-      cy.get(".sp_account").type("radio").check("Savings");
-      cy.get('input[name="amount"]').type("5000");
-      cy.get('input[name="date"]').type("2023-08-09");
-      cy.get('input[name="description"]').type("-");
-
-      //klik pay
-      cy.get(".pay_saved_payees").click();
+      // //klik pay
+      cy.get("#pay_saved_payees").click();
     });
   });
   //it("Masuk ke halaman pay bills", () => {});
-  //it("Mengisi payment", () => {});
+  //it("Mengisi form", () => {});
+  //it("klik pay", () => {})
 });
