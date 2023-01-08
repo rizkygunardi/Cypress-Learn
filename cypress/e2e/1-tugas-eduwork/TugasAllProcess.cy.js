@@ -31,9 +31,7 @@ describe('Tugas All Process', () => {
 			cy.get('.inventory_details_name').should('contain', 'Sauce Labs Backpack')
 
 			//logout
-			cy.get('button').contains('Open Menu').click()
-			cy.get('a').contains('Logout').click()
-			cy.get('.login_logo').should('be.visible')
+			cy.logout()
 		})
 	})
 
@@ -77,9 +75,7 @@ describe('Tugas All Process', () => {
 			cy.get('.inventory_details_img_container').should('be.visible').click()
 
 			//logout
-			cy.get('button').contains('Open Menu').click()
-			cy.get('a').contains('Logout').click()
-			cy.get('.login_logo').should('be.visible')
+			cy.logout()
 		})
 	})
 
@@ -103,9 +99,7 @@ describe('Tugas All Process', () => {
 			cy.get('.inventory_details_name').should('contain', 'Sauce Labs Backpack')
 
 			//logout
-			cy.get('button').contains('Open Menu').click()
-			cy.get('a').contains('Logout').click()
-			cy.get('.login_logo').should('be.visible')
+			cy.logout()
 		})
 	})
 })
