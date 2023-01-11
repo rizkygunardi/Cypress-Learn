@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
 describe('Tugas Login', () => {
-	beforeEach(() => {
-		cy.visit('https://saucedemo.com')
-		cy.url().should('include', 'saucedemo.com')
-	})
+	// beforeEach(() => {
+	// 	cy.visit('https://saucedemo.com')
+	// 	cy.url().should('include', 'saucedemo.com')
+	// })
 
 	it('Mengecek halaman website', () => {
 		cy.visit('https://saucedemo.com')
@@ -13,7 +13,7 @@ describe('Tugas Login', () => {
 
 	it('Mengecek field email (NORMAL)', () => {
 		//cy.visit('https://www.saucedemo.com')
-		cy.fixture('data').then(data => {
+		cy.fixture('data').then((data) => {
 			const username = data.username
 			const password = data.password
 
@@ -33,7 +33,7 @@ describe('Tugas Login', () => {
 
 	it('Mengecek field email (ERROR)', () => {
 		//cy.visit('https://www.saucedemo.com')
-		cy.fixture('data').then(data => {
+		cy.fixture('data').then((data) => {
 			const username = data.username
 			const password = data.password
 
@@ -56,7 +56,7 @@ describe('Tugas Login', () => {
 
 	it('Mengecek field email (PROBLEM)', () => {
 		//cy.visit('https://www.saucedemo.com')
-		cy.fixture('data').then(data => {
+		cy.fixture('data').then((data) => {
 			const username = data.username
 			const password = data.password
 
@@ -78,7 +78,7 @@ describe('Tugas Login', () => {
 
 	it('Mengecek field email (GLITCH)', () => {
 		//cy.visit('https://www.saucedemo.com')
-		cy.fixture('data').then(data => {
+		cy.fixture('data').then((data) => {
 			const username = data.username
 			const password = data.password
 
